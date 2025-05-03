@@ -15,6 +15,8 @@
  */
 
 #include QMK_KEYBOARD_H
+#include "keymap_japanese.h"
+
 #include "nglist.h"
 #include "nglistarray.h"
 #include "naginata.h"
@@ -1030,16 +1032,20 @@ void ngh_JKS() { // ⇒{改行}
   ng_send_unicode_string_P(PSTR("⇒"));
 }
 
-void ngh_JKD() { // ？{改行}
-  ng_send_unicode_string_P(PSTR("？"));
+void ngh_JKD() { // ？
+  register_code(KC_LSFT);
+  tap_code(KC_SLSH);
+  unregister_code(KC_LSFT);
 }
 
-void ngh_JKF() { // 「{改行}
-  ng_send_unicode_string_P(PSTR("「"));
+void ngh_JKF() { // 「
+  tap_code(JP_LBRC);
 }
 
-void ngh_JKG() { // ({改行}
-  ng_send_unicode_string_P(PSTR("("));
+void ngh_JKG() { // (
+  register_code(KC_LSFT);
+  tap_code(JP_8);
+  unregister_code(KC_LSFT);
 }
 
 void ngh_JKZ() { //《》{改行}{↑}
@@ -1051,16 +1057,20 @@ void ngh_JKX() { // F2
   tap_code(KC_F2);
 }
 
-void ngh_JKC() { // ！{改行}
-  ng_send_unicode_string_P(PSTR("！"));
+void ngh_JKC() { // ！
+  register_code(KC_LSFT);
+  tap_code(JP_1);
+  unregister_code(KC_LSFT);
 }
 
-void ngh_JKV() { // 」{改行}
-  ng_send_unicode_string_P(PSTR("」"));
+void ngh_JKV() { // 」
+  tap_code(JP_RBRC);
 }
 
-void ngh_JKB() { // ){改行}
-  ng_send_unicode_string_P(PSTR(")"));
+void ngh_JKB() { // )
+  register_code(KC_LSFT);
+  tap_code(JP_9);
+  unregister_code(KC_LSFT);
 }
 
 void ngh_DFY() { // ^c
