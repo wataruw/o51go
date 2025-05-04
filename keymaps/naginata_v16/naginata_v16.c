@@ -1002,34 +1002,42 @@ void ng_SY() {
   unregister_code(KC_LSFT);
 }
 
-void ngh_JKQ() { //【】{改行}{↑}
-  ng_send_unicode_string_P(PSTR("【】"));
-  ng_up(1);
+void ngh_JKQ() { // ぬ3　⇒【】を「ぬ3」に登録
+  tap_code(KC_N);
+  tap_code(KC_U);
+  tap_code(KC_3);
 }
 
-void ngh_JKW() { // ／{改行}
-  ng_send_unicode_string_P(PSTR("／"));
+void ngh_JKW() { // ぬ5　……を「ぬ5」に登録
+  tap_code(KC_N);
+  tap_code(KC_U);
+  tap_code(KC_5);
 }
 
 // void ngh_JKE() { // /*ディ*/
   
 // }
 
-void ngh_JKR() { // ^s
-  ng_save();
+void ngh_JKR() { // ぬ6　――を「ぬ6」に登録
+  tap_code(KC_N);
+  tap_code(KC_U);
+  tap_code(KC_6);
 }
 
 void ngh_JKT() { // ・
   tap_code(KC_SLSH);
 }
 
-void ngh_JKA() { // 『』{改行}{↑}
-  ng_send_unicode_string_P(PSTR("『』"));
-  ng_up(1);
+void ngh_JKA() { // ぬ2　⇒『』を「ぬ2」に登録
+  tap_code(KC_N);
+  tap_code(KC_U);
+  tap_code(KC_2);
 }
 
-void ngh_JKS() { // ⇒{改行}
-  ng_send_unicode_string_P(PSTR("⇒"));
+void ngh_JKS() { // ぬ1　⇒を「ぬ1」に登録
+  tap_code(KC_N);
+  tap_code(KC_U);
+  tap_code(KC_1);
 }
 
 void ngh_JKD() { // ？
@@ -1048,9 +1056,10 @@ void ngh_JKG() { // (
   unregister_code(KC_LSFT);
 }
 
-void ngh_JKZ() { //《》{改行}{↑}
-  ng_send_unicode_string_P(PSTR("《》"));
-  ng_up(1);
+void ngh_JKZ() { //  ぬ4　⇒《》を「ぬ4」に登録
+  tap_code(KC_N);
+  tap_code(KC_U);
+  tap_code(KC_4);
 }
 
 void ngh_JKX() { // F2
