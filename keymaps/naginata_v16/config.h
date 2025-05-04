@@ -20,6 +20,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
+#define USB_WAIT_FOR_ENUMERATION
+
 // 日本語キーボードの設定
 #define KEYBOARD_JAPANESE
 #define JP_KEYBOARD_MODE
