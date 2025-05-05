@@ -1002,42 +1002,52 @@ void ng_SY() {
   unregister_code(KC_LSFT);
 }
 
-void ngh_JKQ() { // ぬ3　⇒【】を「ぬ3」に登録
+void ngh_JKQ() { // ぬ3 【】を「ぬ3」に登録
   tap_code(KC_N);
   tap_code(KC_U);
   tap_code(KC_3);
+  ng_left(1);
+  tap_code(KC_ENT);
 }
 
-void ngh_JKW() { // ぬ5　……を「ぬ5」に登録
+void ngh_JKW() { // ぬ5 ……を「ぬ5」に登録
   tap_code(KC_N);
   tap_code(KC_U);
   tap_code(KC_5);
+  ng_left(1);
+  tap_code(KC_ENT);
 }
 
 // void ngh_JKE() { // /*ディ*/
   
 // }
 
-void ngh_JKR() { // ぬ6　――を「ぬ6」に登録
+void ngh_JKR() { // ぬ6 ――を「ぬ6」に登録
   tap_code(KC_N);
   tap_code(KC_U);
   tap_code(KC_6);
+  ng_left(1);
+  tap_code(KC_ENT);
 }
 
 void ngh_JKT() { // ・
   tap_code(KC_SLSH);
 }
 
-void ngh_JKA() { // ぬ2　⇒『』を「ぬ2」に登録
+void ngh_JKA() { // ぬ2 『』を「ぬ2」に登録
   tap_code(KC_N);
   tap_code(KC_U);
   tap_code(KC_2);
+  ng_left(1);
+  tap_code(KC_ENT);
 }
 
-void ngh_JKS() { // ぬ1　⇒を「ぬ1」に登録
+void ngh_JKS() { // ぬ1 ⇒を「ぬ1」に登録
   tap_code(KC_N);
   tap_code(KC_U);
   tap_code(KC_1);
+  ng_left(1);
+  tap_code(KC_ENT);
 }
 
 void ngh_JKD() { // ？
@@ -1052,10 +1062,12 @@ void ngh_JKG() { // (
   tap_code16(S(JP_8));
 }
 
-void ngh_JKZ() { //  ぬ4　⇒《》を「ぬ4」に登録
+void ngh_JKZ() { //  ぬ4 《》を「ぬ4」に登録
   tap_code(KC_N);
   tap_code(KC_U);
   tap_code(KC_4);
+  ng_left(1);
+  tap_code(KC_ENT);
 }
 
 void ngh_JKX() { // F2
@@ -1115,27 +1127,19 @@ void ngh_DFSCLN() { // ^i
 }
 
 void ngh_DFN() { // +{←}
-  register_code(KC_LSFT);
-  tap_code(KC_LEFT);
-  unregister_code(KC_LSFT);
+  tap_code16(S(KC_LEFT));
 }
 
 void ngh_DFM() { // +{↓}
-  register_code(KC_LSFT);
-  tap_code(KC_DOWN);
-  unregister_code(KC_LSFT);
+  tap_code16(S(KC_DOWN));
 }
 
 void ngh_DFCOMM() { // +{↑}
-  register_code(KC_LSFT);
-  tap_code(KC_UP);
-  unregister_code(KC_LSFT);
+  tap_code16(S(KC_UP));
 }
 
 void ngh_DFDOT() { // +{→}
-  register_code(KC_LSFT);
-  tap_code(KC_RGHT);
-  unregister_code(KC_LSFT);
+  tap_code16(S(KC_RGHT));
 }
 
 void ngh_DFSLSH() { // ^u
