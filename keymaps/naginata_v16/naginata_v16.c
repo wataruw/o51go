@@ -1006,7 +1006,9 @@ void ngh_JKQ() { // ぬ3 【】を「ぬ3」に登録
   tap_code(KC_N);
   tap_code(KC_U);
   tap_code(KC_3);
+  wait_ms(300);
   ng_left(1);
+  wait_ms(300);
   tap_code(KC_ENT);
 }
 
@@ -1014,7 +1016,9 @@ void ngh_JKW() { // ぬ5 ……を「ぬ5」に登録
   tap_code(KC_N);
   tap_code(KC_U);
   tap_code(KC_5);
+  wait_ms(300);
   ng_left(1);
+  wait_ms(300);
   tap_code(KC_ENT);
 }
 
@@ -1026,7 +1030,9 @@ void ngh_JKR() { // ぬ6 ――を「ぬ6」に登録
   tap_code(KC_N);
   tap_code(KC_U);
   tap_code(KC_6);
+  wait_ms(300);
   ng_left(1);
+  wait_ms(300);
   tap_code(KC_ENT);
 }
 
@@ -1038,7 +1044,9 @@ void ngh_JKA() { // ぬ2 『』を「ぬ2」に登録
   tap_code(KC_N);
   tap_code(KC_U);
   tap_code(KC_2);
+  wait_ms(300);
   ng_left(1);
+  wait_ms(300);
   tap_code(KC_ENT);
 }
 
@@ -1046,7 +1054,9 @@ void ngh_JKS() { // ぬ1 ⇒を「ぬ1」に登録
   tap_code(KC_N);
   tap_code(KC_U);
   tap_code(KC_1);
+  wait_ms(300);
   ng_left(1);
+  wait_ms(300);
   tap_code(KC_ENT);
 }
 
@@ -1066,7 +1076,9 @@ void ngh_JKZ() { //  ぬ4 《》を「ぬ4」に登録
   tap_code(KC_N);
   tap_code(KC_U);
   tap_code(KC_4);
+  wait_ms(300);
   ng_left(1);
+  wait_ms(300);
   tap_code(KC_ENT);
 }
 
