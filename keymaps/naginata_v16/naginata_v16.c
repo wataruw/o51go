@@ -1041,9 +1041,7 @@ void ngh_JKS() { // ぬ1　⇒を「ぬ1」に登録
 }
 
 void ngh_JKD() { // ？
-  register_code(KC_LSFT);
-  tap_code(KC_SLSH);
-  unregister_code(KC_LSFT);
+  tap_code16(S(KC_SLSH));
 }
 
 void ngh_JKF() { // 「
@@ -1051,9 +1049,7 @@ void ngh_JKF() { // 「
 }
 
 void ngh_JKG() { // (
-  register_code(KC_LSFT);
-  tap_code(JP_8);
-  unregister_code(KC_LSFT);
+  tap_code16(S(JP_8));
 }
 
 void ngh_JKZ() { //  ぬ4　⇒《》を「ぬ4」に登録
@@ -1067,9 +1063,7 @@ void ngh_JKX() { // F2
 }
 
 void ngh_JKC() { // ！
-  register_code(KC_LSFT);
-  tap_code(JP_1);
-  unregister_code(KC_LSFT);
+  tap_code16(S(JP_1));
 }
 
 void ngh_JKV() { // 」
@@ -1077,9 +1071,7 @@ void ngh_JKV() { // 」
 }
 
 void ngh_JKB() { // )
-  register_code(KC_LSFT);
-  tap_code(JP_9);
-  unregister_code(KC_LSFT);
+  tap_code16(S(JP_9));
 }
 
 void ngh_DFY() { // ^c
@@ -1402,7 +1394,7 @@ void ng_home() {
       tap_code(KC_HOME);
       break;
     case NG_MAC:
-      tap_code16(LCTL(KC_A));
+      tap_code16(LCTL(KC_LEFT));
       break;
   }
 }
@@ -1414,7 +1406,7 @@ void ng_end() {
       tap_code(KC_END);
       break;
     case NG_MAC:
-      tap_code16(LCTL(KC_E));
+      tap_code16(LCTL(KC_RGHT));
       break;
   }
 }
@@ -1426,7 +1418,7 @@ void ng_katakana() {
       tap_code16(LCTL(KC_I));
       break;
     case NG_MAC:
-      tap_code16(LCTL(KC_K));
+      tap_code16(LCMD(KC_K));
       break;
   }
 }
@@ -1450,7 +1442,7 @@ void ng_hiragana() {
       tap_code16(LCTL(KC_U));
       break;
     case NG_MAC:
-      tap_code16(LCTL(KC_J));
+      tap_code16(LCMD(KC_J));
       break;
   }
 }
@@ -1480,9 +1472,7 @@ void ng_undo() {
 void ng_saihenkan() {
   switch (naginata_config.os) {
     case NG_WIN:
-      register_code(KC_LGUI);
-      tap_code(KC_SLSH);
-      unregister_code(KC_LGUI);
+      tap_code16(LGUI(KC_SLSH));
       break;
     case NG_LINUX:
       tap_code(KC_INT4);
