@@ -59,6 +59,8 @@ void ng_undo(void);
 void ng_saihenkan(void);
 void ng_eof(void);
 
+void ng_mcr0(void);
+
 void ng_T(void);
 void ng_Y(void);
 void ng_ST(void);
@@ -177,6 +179,7 @@ typedef enum naginata_keycodes {
   NG_SHOS,
   NG_TAYO,
   NG_KOTI,
+  NG_MCR0,
 } NGKEYS;
 
 // EEPROMに保存する設定

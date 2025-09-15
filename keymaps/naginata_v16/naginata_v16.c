@@ -485,6 +485,17 @@ void ng_show_os(void) {
   // }
 }
 
+// メール全削除マクロ
+void ng_mcr0(void) {
+  tap_code16(LCTL(KC_A)); // 全選択
+  wait_ms(200);
+  tap_code16(LCTL(KC_Q)); // 既読にする
+  wait_ms(200);
+  register_code(KC_LSFT); // Shift + Delで完全削除
+  tap_code(KC_DEL);
+  unregister_code(KC_LSFT);
+}
+
 #define MAX_STRLEN 40
 void ng_send_unicode_string_P(const char *pstr) {
   if (strlen_P(pstr) > MAX_STRLEN) return;
@@ -696,6 +707,10 @@ bool process_naginata(uint16_t keycode, keyrecord_t *record) {
       //   kouchi_shift_toggle();
       //   return false;
       //   break;
+      case NG_MCR0:
+        ng_mcr0();
+        return false;
+        break;
     }
   }
 
@@ -1007,7 +1022,8 @@ void ngh_JKQ() { // ぬ3 【】を「ぬ3」に登録
   tap_code(KC_U);
   tap_code(KC_3);
   wait_ms(300);
-  ng_left(1);
+  // ng_left(1);
+  tap_code(KC_SPC);
   wait_ms(300);
   tap_code(KC_ENT);
 }
@@ -1017,7 +1033,8 @@ void ngh_JKW() { // ぬ5 ……を「ぬ5」に登録
   tap_code(KC_U);
   tap_code(KC_5);
   wait_ms(300);
-  ng_left(1);
+  // ng_left(1);
+  tap_code(KC_SPC);
   wait_ms(300);
   tap_code(KC_ENT);
 }
@@ -1031,7 +1048,8 @@ void ngh_JKR() { // ぬ6 ――を「ぬ6」に登録
   tap_code(KC_U);
   tap_code(KC_6);
   wait_ms(300);
-  ng_left(1);
+  // ng_left(1);
+  tap_code(KC_SPC);
   wait_ms(300);
   tap_code(KC_ENT);
 }
@@ -1045,7 +1063,8 @@ void ngh_JKA() { // ぬ2 『』を「ぬ2」に登録
   tap_code(KC_U);
   tap_code(KC_2);
   wait_ms(300);
-  ng_left(1);
+  // ng_left(1);
+  tap_code(KC_SPC);
   wait_ms(300);
   tap_code(KC_ENT);
 }
@@ -1055,21 +1074,25 @@ void ngh_JKS() { // ぬ1 ⇒を「ぬ1」に登録
   tap_code(KC_U);
   tap_code(KC_1);
   wait_ms(300);
-  ng_left(1);
+  // ng_left(1);
+  tap_code(KC_SPC);
   wait_ms(300);
   tap_code(KC_ENT);
 }
 
 void ngh_JKD() { // ？
   tap_code16(S(KC_SLSH));
+  tap_code(KC_ENT);
 }
 
 void ngh_JKF() { // 「
   tap_code(JP_LBRC);
+  tap_code(KC_ENT);
 }
 
 void ngh_JKG() { // (
   tap_code16(S(JP_8));
+  tap_code(KC_ENT);
 }
 
 void ngh_JKZ() { //  ぬ4 《》を「ぬ4」に登録
@@ -1077,7 +1100,8 @@ void ngh_JKZ() { //  ぬ4 《》を「ぬ4」に登録
   tap_code(KC_U);
   tap_code(KC_4);
   wait_ms(300);
-  ng_left(1);
+  // ng_left(1);
+  tap_code(KC_SPC);
   wait_ms(300);
   tap_code(KC_ENT);
 }
@@ -1088,14 +1112,17 @@ void ngh_JKX() { // F2
 
 void ngh_JKC() { // ！
   tap_code16(S(JP_1));
+  tap_code(KC_ENT);
 }
 
 void ngh_JKV() { // 」
   tap_code(JP_RBRC);
+  tap_code(KC_ENT);
 }
 
 void ngh_JKB() { // )
   tap_code16(S(JP_9));
+  tap_code(KC_ENT);
 }
 
 void ngh_DFY() { // ^c

@@ -23,31 +23,28 @@ static uint16_t ng_off_keys[] = {KC_F, KC_G}; // FGで薙刀式オフ
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = LAYOUT( /* Base */
-        KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    JP_7,    JP_8,    JP_9,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,
-        KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    JP_4,    JP_5,    JP_6,    KC_H,    KC_J,    KC_K,    KC_L,    KC_MINS,
-        KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    JP_1,    JP_2,    JP_3,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH,
-//      KC_LSFT, KC_LGUI, KC_LALT, KC_TAB,    KC_ESC,    KC_SPC,    KC_ENT,   KC_BSPC,   KC_DEL,  JP_0,    KC_LCTL, MO(1)
-        KC_LSFT, KC_LGUI, KC_LALT, KC_TAB,    KC_SPC,    KC_LCTL,   KC_BSPC,  KC_ENT,    KC_DEL,  JP_0,    KC_ESC,  MO(1)
+        KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_PSCR,      KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_ESC,
+        KC_LCTL, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_F2,        KC_H,    KC_J,    KC_K,    KC_L,    KC_MINS, JP_AT,
+        KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    LSG(KC_RGHT), KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_UP,   KC_SLSH,
+        MO(1),   MO(2),   KC_LGUI, KC_LALT,   NG_MCR0,    KC_SPC,      KC_ENT,    KC_BSPC,    KC_DEL,  KC_LEFT, KC_DOWN, KC_RGHT
     ),  
     [1] = LAYOUT( /* FN */
-        KC_LNG2, KC_LNG1, JP_CIRC, JP_YEN,  KC_F12,  KC_F7,   KC_F8,   KC_F9,   KC_MS_WH_LEFT, KC_MS_WH_DOWN, KC_MS_WH_UP, KC_MS_WH_RIGHT,  KC_PGUP,
-        KC_HOME, JP_LBRC, JP_RBRC, JP_AT,   KC_F11,  KC_F4,   KC_F5,   KC_F6,   KC_LEFT,       KC_DOWN,       KC_UP,       KC_RGHT,         KC_END,
-        KC_PSCR, JP_COLN, JP_SCLN, JP_BSLS, KC_F10,  KC_F1,   KC_F2,   KC_F3,   KC_MS_LEFT,    KC_MS_DOWN,    KC_MS_UP,    KC_MS_RIGHT,     KC_PGDN,
-//      KC_LSFT, KC_LGUI, KC_LALT, KC_TAB,    KC_ESC,    KC_BTN2,   KC_BTN1,  KC_BSPC,         KC_DEL,        MO(2),       KC_LCTL,         MO(1)
-        KC_LSFT, KC_LGUI, KC_LALT, KC_TAB,    KC_SPC,    KC_LCTL,   KC_BTN2,  KC_BTN1,         KC_DEL,        MO(2),       KC_ESC,          MO(1)
+        KC_TAB,  KC_LNG2, KC_LNG1, JP_CIRC, JP_YEN,  JP_7,    JP_8,    JP_9,    S(JP_7), S(JP_8), S(JP_9),    KC_HOME,     KC_END,
+        KC_LCTL, XXXXXXX, JP_LBRC, JP_RBRC, JP_BSLS, JP_4,    JP_5,    JP_6,    S(JP_4), S(JP_5), S(JP_6),    S(JP_CIRC),  S(JP_AT),
+        KC_LSFT, XXXXXXX, JP_SCLN, JP_COLN, JP_0,    JP_1,    JP_2,    JP_3,    S(JP_1), S(JP_2), S(JP_3),    KC_MS_UP,    S(JP_BSLS),
+        MO(1),   MO(2),   KC_LGUI, KC_LALT,   NG_MCR0,    KC_BTN2,     KC_BTN1,   KC_BSPC,    KC_DEL,  KC_MS_LEFT, KC_MS_DOWN,  KC_MS_RIGHT
     ),
     [2] = LAYOUT( /* etc. */
-        QK_BOOT, XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-        XXXXXXX, NGSW_LNX, NGSW_MAC, NGSW_WIN, NG_SHOS,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-        XXXXXXX, NG_KOTI,  XXXXXXX,  NG_TAYO,  XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-        XXXXXXX, XXXXXXX,  XXXXXXX,  XXXXXXX,    XXXXXXX,    XXXXXXX,   XXXXXXX,  XXXXXXX,   XXXXXXX, MO(2),   XXXXXXX, MO(1)
+        QK_BOOT, XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  KC_F7, KC_F8, KC_F9,   KC_F12, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+        XXXXXXX, NGSW_LNX, NGSW_MAC, NGSW_WIN, NG_SHOS,  KC_F4, KC_F5, KC_F6,   KC_F11, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+        XXXXXXX, NG_KOTI,  XXXXXXX,  NG_TAYO,  XXXXXXX,  KC_F1, KC_F2, KC_F3,   KC_F10, XXXXXXX, XXXXXXX, KC_MS_WH_UP, XXXXXXX,
+        XXXXXXX, XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX, XXXXXXX,  XXXXXXX, XXXXXXX, XXXXXXX, KC_MS_WH_LEFT, KC_MS_WH_DOWN, KC_MS_WH_RIGHT
     ),
     [3] = LAYOUT( /* NAGI */
-        NG_Q,    NG_W,    NG_E,    NG_R,    NG_T,    JP_7,    JP_8,    JP_9,    NG_Y,    NG_U,    NG_I,    NG_O,    NG_P,
-        NG_A,    NG_S,    NG_D,    NG_F,    NG_G,    JP_4,    JP_5,    JP_6,    NG_H,    NG_J,    NG_K,    NG_L,    NG_SCLN,
-        NG_Z,    NG_X,    NG_C,    NG_V,    NG_B,    JP_1,    JP_2,    JP_3,    NG_N,    NG_M,    NG_COMM, NG_DOT,  NG_SLSH,
-//      KC_LSFT, KC_LGUI, KC_LALT, KC_TAB,    KC_ESC,   NG_SHFT,   NG_SHFT2,  KC_BSPC,   KC_DEL,  JP_0,    KC_LCTL, MO(1)
-        KC_LSFT, KC_LGUI, KC_LALT, KC_TAB,    NG_SHFT,   KC_LCTL,  KC_BSPC,   NG_SHFT2,  KC_DEL,  JP_0,    KC_ESC,  MO(1)
+        KC_TAB,  NG_Q,    NG_W,    NG_E,    NG_R,    NG_T,    KC_PSCR,      NG_Y,    NG_U,    NG_I,    NG_O,    NG_P,    KC_ESC,
+        KC_LCTL, NG_A,    NG_S,    NG_D,    NG_F,    NG_G,    KC_F2,        NG_H,    NG_J,    NG_K,    NG_L,    NG_SCLN, JP_AT,
+        KC_LSFT, NG_Z,    NG_X,    NG_C,    NG_V,    NG_B,    LSG(KC_RGHT), NG_N,    NG_M,    NG_COMM, NG_DOT,  KC_UP,   NG_SLSH,
+        MO(1),   MO(2),   KC_LGUI, KC_LALT,   XXXXXXX,    NG_SHFT,    NG_SHFT2,   KC_BSPC,    KC_DEL,  KC_LEFT, KC_DOWN, KC_RGHT
     )
 };
 
