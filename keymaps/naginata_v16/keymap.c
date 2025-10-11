@@ -29,10 +29,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         MO(1),   MO(2),   KC_LGUI, KC_LALT,   NG_MCR0,    KC_SPC,      KC_ENT,    KC_BSPC,    KC_DEL,  KC_LEFT, KC_DOWN, KC_RGHT
     ),  
     [1] = LAYOUT( /* FN */
-        KC_TAB,  KC_LNG2, KC_LNG1, JP_CIRC, JP_YEN,  JP_7,    JP_8,    JP_9,    S(JP_7), S(JP_8), S(JP_9),    KC_HOME,     KC_END,
-        KC_LCTL, XXXXXXX, JP_LBRC, JP_RBRC, JP_BSLS, JP_4,    JP_5,    JP_6,    S(JP_4), S(JP_5), S(JP_6),    S(JP_CIRC),  S(JP_AT),
-        KC_LSFT, XXXXXXX, JP_SCLN, JP_COLN, JP_0,    JP_1,    JP_2,    JP_3,    S(JP_1), S(JP_2), S(JP_3),    KC_MS_UP,    S(JP_BSLS),
-        MO(1),   MO(2),   KC_LGUI, KC_LALT,   NG_MCR0,    KC_BTN2,     KC_BTN1,   KC_BSPC,    KC_DEL,  KC_MS_LEFT, KC_MS_DOWN,  KC_MS_RIGHT
+        KC_ESC,  KC_LNG2,    KC_LNG1, JP_CIRC, JP_YEN,  KC_P7,    KC_P8,    KC_P9,    S(JP_7), S(JP_LBRC), S(JP_RBRC), S(JP_8),     S(JP_9),
+        KC_LCTL, XXXXXXX,    JP_LBRC, JP_RBRC, JP_BSLS, KC_P4,    KC_P5,    KC_P6,    S(JP_4), S(JP_5),    S(JP_6),    S(JP_CIRC),  S(JP_AT),
+        KC_LSFT, LGUI(JP_1), JP_SCLN, JP_COLN, S(JP_3), KC_P1,    KC_P2,    KC_P3,    S(JP_1), S(JP_2),    S(JP_3),    KC_PGUP,     S(JP_BSLS),
+        MO(1),   MO(2),      KC_LGUI, KC_LALT,   NG_MCR0,    KC_P0,     KC_MINS,   KC_BSPC,    KC_DEL,     KC_HOME,    KC_PGDN,     KC_END
     ),
     [2] = LAYOUT( /* etc. */
         QK_BOOT, XXXXXXX,  XXXXXXX,  XXXXXXX,  XXXXXXX,  KC_F7, KC_F8, KC_F9,   KC_F12, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
